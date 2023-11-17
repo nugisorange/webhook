@@ -37,7 +37,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 			resp, _ = atapi.PostStructWithToken[atmessage.Response]("Token", os.Getenv("TOKEN"), dt, "https://api.wa.my.id/api/send/message/text")
 		} else {
 			randm := []string{
-				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nfaisal lagi gaadaa \n aku faibit salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"Hai Akang/eteh punteun " + msg.Alias_name + "\nfaisal lagi gaadaa \n aku faibit salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
 				"IHHH jangan SPAAM berisik tau faibit lagi tidur",
 				"Kamu tampan tau",
 				"Ihhh kamu cantik sekali banget",

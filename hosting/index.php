@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $msg = array(
                 'to' => $data["phone_number"],
                 'isgroup' => false,
-                'messages' => 'hai kak ',
+                'messages' => 'hallo bro kumaha damang? ',
             );
             // JSON encode the data.
             $jsonData = json_encode($msg);

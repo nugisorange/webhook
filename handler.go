@@ -26,7 +26,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 				location = "Unknown Location"
 			}
 
-			reply := fmt.Sprintf("Hai hai haiii kamu pasti lagi di %s \n Koordinatenya : %s - %s\n Cara Penggunaan WhatsAuth Ada di link dibawah ini"+
+			reply := fmt.Sprintf("hallo akang/eteh faibit tebak pasti lagi di %s \n Koordinatenya : %s - %s\n Cara Penggunaan WhatsAuth Ada di link dibawah ini"+
 				"yaa kak %s\n", location,
 				strconv.Itoa(int(msg.Longitude)), strconv.Itoa(int(msg.Latitude)), link)
 			dt := &wa.TextMessage{
@@ -37,15 +37,15 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 			resp, _ = atapi.PostStructWithToken[atmessage.Response]("Token", os.Getenv("TOKEN"), dt, "https://api.wa.my.id/api/send/message/text")
 		} else {
 			randm := []string{
-				"Hai Akang/eteh punteun " + msg.Alias_name + "\nfaisal lagi gaadaa \n aku faibit salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"Hallo Akang/eteh punteun " + msg.Alias_name + "\nfaisal lagi gaadaa \n aku faibit salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
 				"IHHH jangan SPAAM berisik tau faibit lagi tidur",
 				"Kamu tampan tau",
-				"Ihhh kamu cantik sekali banget",
+				"masyaalllah kamu cantik banget",
 				"bray, lebih baik beliin aku nasgor",
 				"Jangan galak galak dong kak, aku catut tauu",
-				"Mawar Indah hanya akan muncul dipagi hari, MAKANYA BANGUN PAGI KAK",
-				"kuykuy hari ini faibit bahagiaaa banget",
-				"Bercandyaaa berrcandyaaaa",
+				"orang lain sudah jauh ini masih diem bae, MAKANYA BANGUN PAGI KAK",
+				"bro hari ini faibit senang banget",
+				"beyanda beyanda",
 			}
 			dt := &wa.TextMessage{
 				To:       msg.Phone_number,
@@ -99,7 +99,7 @@ func Liveloc(w http.ResponseWriter, r *http.Request) {
 		location = "Unknown Location"
 	}
 
-	reply := fmt.Sprintf("kamu lagi kamu lagi pasti lagi di %s \n Koordinatenya : %s - %s\n", location,
+	reply := fmt.Sprintf("kamu lagi kamu lagi kenapa selalu ada kamu sih. aku tebak pasti kamu lagi di %s \n Koordinatenya : %s - %s\n", location,
 		strconv.Itoa(int(msg.Longitude)), strconv.Itoa(int(msg.Latitude)))
 
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
